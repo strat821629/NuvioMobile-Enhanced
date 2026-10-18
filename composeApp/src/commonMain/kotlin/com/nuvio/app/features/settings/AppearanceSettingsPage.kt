@@ -176,6 +176,20 @@ internal fun LazyListScope.appearanceSettingsContent(
                 }
                 if (liquidGlassNativeTabBarSupported) {
                     SettingsGroupDivider(isTablet = isTablet)
+                    SettingsSwitchRow(
+                        title = stringResource(Res.string.settings_appearance_liquid_glass),
+                        description = stringResource(
+                            Res.string.settings_appearance_liquid_glass_description,
+                        ),
+                        checked = tabBarBehavior.isEnabled,
+                        isTablet = isTablet,
+                        onCheckedChange = { enabled ->
+                            onTabBarBehaviorSelected(
+                                if (enabled) NuvioTabBarBehavior.Default else NuvioTabBarBehavior.OFF,
+                            )
+                        },
+                    )
+                    SettingsGroupDivider(isTablet = isTablet)
                     SettingsNavigationRow(
                         title = stringResource(Res.string.settings_appearance_tab_bar_behavior),
                         description = stringResource(tabBarBehavior.labelRes),

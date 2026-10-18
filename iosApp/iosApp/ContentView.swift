@@ -923,8 +923,7 @@ final class AppNavigationCoordinator: ObservableObject {
     }
 
     var usesGlassTabBarOverlay: Bool {
-        tabBarBehavior.usesCompactPill ||
-            (tabBarBehavior.isEnabled && UIDevice.current.userInterfaceIdiom == .pad)
+        tabBarBehavior.usesCompactPill
     }
 
     func reloadTabBarBehavior() {
