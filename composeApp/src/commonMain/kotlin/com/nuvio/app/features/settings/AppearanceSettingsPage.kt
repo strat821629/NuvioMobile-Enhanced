@@ -78,6 +78,8 @@ import com.nuvio.app.core.ui.NuvioBottomSheetDivider
 import com.nuvio.app.core.ui.glass.isLiquidGlassAvailable
 import nuvio.composeapp.generated.resources.settings_appearance_liquid_glass_effects
 import nuvio.composeapp.generated.resources.settings_appearance_liquid_glass_effects_description
+import nuvio.composeapp.generated.resources.settings_appearance_liquid_glass
+import nuvio.composeapp.generated.resources.settings_appearance_liquid_glass_description
 
 internal fun LazyListScope.appearanceSettingsContent(
     isTablet: Boolean,
